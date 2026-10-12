@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>یه جمله‌ی بی‌زحمت</title>
+<style>
+  :root { --paper:#eef1ff; --ink:#1b2559; --btn:#ffd23f; --btn-ink:#1b2559; }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper:#121735; --ink:#eef1ff; }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: grid; place-items: center; padding: 24px;
+    background: var(--paper); color: var(--ink);
+    font-family: Vazirmatn, Vazir, Tahoma, system-ui, sans-serif;
+  }
+  main {
+    width: 100%; max-width: 640px; text-align: center;
+    display: grid; gap: 48px; justify-items: center;
+  }
+  #sentence {
+    margin: 0; min-height: 5.6em; display: grid; place-items: center;
+    font-size: clamp(1.5rem, 5vw, 2.4rem); font-weight: 700; line-height: 1.8;
+  }
+  #sentence .in { animation: in .4s ease-out; }
+  @keyframes in { from { opacity: 0; transform: translateY(10px); } }
+  button {
+    font: inherit; font-size: 1.25rem; font-weight: 700;
+    padding: 16px 40px; border: 3px solid var(--ink); border-radius: 999px;
+    background: var(--btn); color: var(--btn-ink); cursor: pointer;
+    box-shadow: 0 6px 0 var(--ink);
+    transition: transform .08s, box-shadow .08s;
